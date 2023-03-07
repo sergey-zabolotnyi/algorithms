@@ -1,6 +1,5 @@
-package homeWorks.homework01_07_03_2023;
-
 public class palindromeNumber {
+
     public static boolean isPalindrome(int x) {
         // преобразуем число в строку для проверки символов
         String numberToString = Integer.toString(x);
