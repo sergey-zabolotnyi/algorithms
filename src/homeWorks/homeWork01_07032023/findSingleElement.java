@@ -1,4 +1,4 @@
-package homeWorks.homework01_07_03_2023;
+package homeWorks.homeWork01_07032023;
 
 public class findSingleElement {
     public static void main(String[] args) {
