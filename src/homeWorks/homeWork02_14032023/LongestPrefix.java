@@ -1,4 +1,4 @@
-package homeWorks.homeWork02_15032023;
+package homeWorks.homeWork02_14032023;
 
 public class LongestPrefix {
     public static void main(String[] args) {
