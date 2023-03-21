@@ -2,10 +2,10 @@ package homeWorks.homeWork02_14032023;
 
 public class LongestPrefix {
     public static void main(String[] args) {
-        String[] str1 = {"flower","flow","flight"};
-        String[] str2 = {"dog","racecar","car"};
-        String[] myStr1 = {"transatlantic","transfer", "translation"};
-        String[] myStr2 = {"superhero","supermodel", "superJava"};
+        String[] str1 = {"flower", "flow", "flight"};
+        String[] str2 = {"dog", "racecar", "car"};
+        String[] myStr1 = {"transatlantic", "transfer", "translation"};
+        String[] myStr2 = {"superhero", "supermodel", "superJava"};
 
         System.out.println(longestPrefixString(str1));
         System.out.println(longestPrefixString(str2));
@@ -14,7 +14,7 @@ public class LongestPrefix {
         System.out.println(longestPrefixString(myStr2));
     }
 
-    public static String longestPrefixString (String[] str) {
+    public static String longestPrefixString(String[] str) {
         String prefix = str[0];
         for (int i = 1; i < str.length; i++) {
             while (str[i].indexOf(prefix) != 0) {

@@ -8,6 +8,7 @@ public class findSingleElement {
         System.out.println("В массиве только данный элемент: " + uniqueNum + " в 1 эксемпляре"); // ищем 6
 
     }
+
     public static int findSingleElement(int[] arr) {
         int result = 0;
         for (int i = 0; i < arr.length; i++) {
