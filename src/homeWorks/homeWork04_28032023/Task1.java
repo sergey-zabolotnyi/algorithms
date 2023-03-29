@@ -14,29 +14,28 @@ public class Task1 {
         iterativeHanoi(4); // четыре диска
     }
     public static void iterativeHanoi(int n) {
-        Stack<Integer> s = new Stack<Integer>();
-        Stack<Integer> d = new Stack<Integer>();
         Stack<Integer> a = new Stack<Integer>();
+        Stack<Integer> b = new Stack<Integer>();
+        Stack<Integer> c = new Stack<Integer>();
         int totalMoves = (int) Math.pow(2, n) - 1;
         for (int i = n; i >= 1; i--) {
-            s.push(i);
+            a.push(i);
         }
         if (n % 2 == 0) {
-            Stack<Integer> temp = d;
-            d = a;
-            a = temp;
+            Stack<Integer> temp = c;
+            c = b;
+            b = temp;
         }
         for (int i = 1; i <= totalMoves; i++) {
             if (i % 3 == 1) {
-                moveDisksBetweenTwoPoles(s, d, "A", "C");
+                moveDisksBetweenTwoPoles(a, c, "A", "C");
             } else if (i % 3 == 2) {
-                moveDisksBetweenTwoPoles(s, a, "A", "B");
+                moveDisksBetweenTwoPoles(a, b, "A", "B");
             } else if (i % 3 == 0) {
-                moveDisksBetweenTwoPoles(a, d, "B", "C");
+                moveDisksBetweenTwoPoles(b, c, "B", "C");
             }
         }
     }
-
     public static void moveDisksBetweenTwoPoles(Stack<Integer> from, Stack<Integer> to, String fromPole, String toPole) {
         int pole1Top = from.isEmpty() ? Integer.MAX_VALUE : from.peek();
         int pole2Top = to.isEmpty() ? Integer.MAX_VALUE : to.peek();
