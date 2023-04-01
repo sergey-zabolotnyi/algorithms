@@ -6,7 +6,8 @@ public class DevideRectangle {
     }
 
     public static void divideRectangleToSquares(int width, int height) {
-        // если ширина и высота равны, то это уже квадрат, выводим его размер
+        // если ширина и высота равны, то это уже квадрат, выводим его размеры
+
         if (width == height) {
             System.out.println("Квадрат со стороной " + width);
         } else {
@@ -18,6 +19,7 @@ public class DevideRectangle {
             System.out.println("Квадрат со стороной " + squareSize);
 
             // вызываем функцию рекурсивно для оставшейся части прямоугольника
+
             divideRectangleToSquares(remainingSize, squareSize);
         }
     }
