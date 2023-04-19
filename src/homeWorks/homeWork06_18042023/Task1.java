@@ -5,8 +5,10 @@ import java.util.Arrays;
 public class Task1 {
     public static void main(String[] args) {
         int[] myArray = {2,4,6,9,12,-3,0,24,10,15,9,1,3,-5};
-        quickSort(myArray, 0, myArray.length-1);
         System.out.println(Arrays.toString(myArray));
+        System.out.println("---------------");
+        quickSort(myArray, 0, myArray.length-1);
+        System.out.println("Отсортированный массив:\n" + Arrays.toString(myArray));
     }
     public static void quickSort(int[] myArray, int less, int greater) {
         int i = less, j = greater;
