@@ -18,6 +18,13 @@ public class Task1 {
         System.out.println(Arrays.toString(convertArr(array2))); // Output: [4,3,2,2]
         System.out.println(Arrays.toString(convertArr(array3))); // Output: [1,0]
         System.out.println(Arrays.toString(convertArr(array4))); // Output: [1,0,0,0,0]
+        System.out.println("---------");
+
+        // мы начали изучать на Java stream API, решил упростить код стримами
+        System.out.println(Arrays.toString(convertWithStream(array1))); // Output: [1,2,4]
+        System.out.println(Arrays.toString(convertWithStream(array2))); // Output: [4,3,2,2]
+        System.out.println(Arrays.toString(convertWithStream(array3))); // Output: [1,0]
+        System.out.println(Arrays.toString(convertWithStream(array4))); // Output: [1,0,0,0,0]
         
     }
     public static int[] convertArr(int[] arr) {
@@ -46,6 +53,19 @@ public class Task1 {
             //System.out.println(arr1[i]);
         }
         return arr1;
+    }
+    // делаем то же самое но с помощью stream
+    public static int[] convertWithStream(int[]arr){
+        // 1. Переводим массив в число
+       int number = Arrays.stream(arr)
+               .reduce(0,(sum,n)->sum=sum*10+n);
+        // 2. Увеличиваем число на 1
+       number+=1;
+        // 3. Создаем новый массив и заполняем элементами
+       return Integer.toString(number)
+               .chars()
+               .map(Character::getNumericValue)
+               .toArray();
     }
 
 }
