@@ -5,7 +5,7 @@ import java.util.List;
 
 public class KnightTour {
 
-    private static final int BOARD_SIZE = 9;
+    private static final int BOARD_SIZE = 8;
     private static final int[][] MOVES = {{2, 1}, {1, 2}, {-1, 2}, {-2, 1}, {-2, -1}, {-1, -2}, {1, -2}, {2, -1}};
     private static int[][] board = new int[BOARD_SIZE][BOARD_SIZE];
     private static int movesCount = 0;
