@@ -1,6 +1,4 @@
-package homeWorks.homeWork09_09052023;
-
-import java.util.Arrays;
+package homeWorks.hw09_09052023;
 
 public class Grasshopper {
     public static void main(String[] args) {
@@ -10,7 +8,7 @@ public class Grasshopper {
         // Сколько существует разных способов (путей) добраться до последней кувшинки?
         // Это задача на динамическое программирование.
 
-        int n = 7; // количество кувшинок
+        int n = 10; // количество кувшинок
         System.out.printf("Количество способов добраться до %d-й кувшинки: %d", n, countRoutes(n));
     }
     static int countRoutes(int n){

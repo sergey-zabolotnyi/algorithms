@@ -1,4 +1,4 @@
-package homeWorks.homeWork07_25042023;
+package homeWorks.hw07_25042023;
 
 import java.util.Arrays;
 

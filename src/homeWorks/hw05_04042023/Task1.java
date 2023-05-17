@@ -1,4 +1,4 @@
-package homeWorks.homeWork05_04042023;
+package homeWorks.hw05_04042023;
 
 public class Task1 {
 

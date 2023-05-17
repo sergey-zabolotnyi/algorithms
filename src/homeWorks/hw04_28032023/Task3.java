@@ -1,4 +1,4 @@
-package homeWorks.homeWork04_28032023;
+package homeWorks.hw04_28032023;
 
 public class Task3 {
     // 3. Найдите пиковый элемент в двумерном массиве.

@@ -1,4 +1,4 @@
-package homeWorks.homeWork03_21032023;
+package homeWorks.hw03_21032023;
 
 
 public class ThreeTowersRecursive {

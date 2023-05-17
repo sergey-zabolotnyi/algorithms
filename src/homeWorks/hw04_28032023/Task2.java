@@ -1,4 +1,4 @@
-package homeWorks.homeWork04_28032023;
+package homeWorks.hw04_28032023;
 
 public class Task2 {
     // Даны два целых числа x и n, напишите функцию для вычисления x^n

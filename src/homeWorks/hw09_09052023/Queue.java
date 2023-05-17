@@ -1,4 +1,4 @@
-package homeWorks.homeWork09_09052023;
+package homeWorks.hw09_09052023;
 
 public class Queue {
 

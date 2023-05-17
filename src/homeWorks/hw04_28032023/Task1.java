@@ -1,4 +1,4 @@
-package homeWorks.homeWork04_28032023;
+package homeWorks.hw04_28032023;
 
 import java.util.Stack;
 public class Task1 {

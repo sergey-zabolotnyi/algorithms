@@ -1,4 +1,4 @@
-package homeWorks.homeWork08_02052023;
+package homeWorks.hw08_02052023;
 
 public class Task1 {
     // Дано прямоугольное поле размером n*m клеток. Можно совершать шаги длиной в одну клетку вправо или вниз.
