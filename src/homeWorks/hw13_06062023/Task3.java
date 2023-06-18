@@ -16,7 +16,7 @@ class TreeNode {
 public class Task3 {
     public static void main(String[] args) {
         // Создаем дерево с помощью массива
-        Integer[] arr1 = {13, 5, 1, 8, 30};
+        Integer[] arr1 = {13, 5, 1, 8, 30   };
         TreeNode root = buildTree(arr1);
 
         // Проверяем и исправляем дерево

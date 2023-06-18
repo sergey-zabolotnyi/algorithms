@@ -4,25 +4,24 @@ public class Task2 {
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();
          tree.root = new Node(3);
-         tree.root.left = new Node(2);
-         tree.root.right = new Node(4);
-         tree.root.left.left = new Node(1);
-         tree.root.right.right = new Node(5);
-         tree.root.right.right.right = new Node(6);
+         tree.root.leftChild = new Node(2);
+         tree.root.rightChild = new Node(4);
+         tree.root.leftChild.leftChild = new Node(1);
+         tree.root.rightChild.rightChild = new Node(5);
+         tree.root.rightChild.rightChild.rightChild = new Node(6);
 
-        int height = tree.getHeight();
-        System.out.println("Высота дерева: " + height);
+        System.out.println("Высота дерева: " + tree.height());
     }
 }
 class Node {
     int data;
-    Node left;
-    Node right;
+    Node leftChild;
+    Node rightChild;
 
     public Node(int data) {
         this.data = data;
-        this.left = null;
-        this.right = null;
+        this.leftChild = null;
+        this.rightChild = null;
     }
 }
 
@@ -33,17 +32,15 @@ class BinaryTree {
         this.root = null;
     }
 
-    private int computeHeight(Node node) {
-        if (node == null) {
+    private int height(Node t) {
+        if (t == null) {
             return 0;
         } else {
-            int leftHeight = computeHeight(node.left);
-            int rightHeight = computeHeight(node.right);
-            return Math.max(leftHeight, rightHeight) + 1;
+            return Math.max(height(t.leftChild), height(t.rightChild)) + 1;
         }
     }
 
-    public int getHeight() {
-        return computeHeight(root);
+    public int height() {
+        return height(root);
     }
 }
