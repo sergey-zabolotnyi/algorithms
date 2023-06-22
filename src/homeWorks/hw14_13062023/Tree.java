@@ -82,7 +82,6 @@ public class Tree {
             }
         }
     }
-
     public int height() {
         return height(root);
     }

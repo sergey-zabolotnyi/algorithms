@@ -187,10 +187,11 @@ public class Tree {
             Node min = subtreeMin(t.rightChild);
 
             // Копируем минимальное значение, которое нужно удалить.
-            t.value = min.value;
+            int value = min.value;
 
             // Рекурсивно удаляем минимальную ноду
             delete(min);
+            t.value = value;
 
         }
     }
