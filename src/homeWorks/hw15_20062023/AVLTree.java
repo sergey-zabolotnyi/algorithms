@@ -5,7 +5,7 @@ public class AVLTree {
     private Node root;
 
     private int getHeight(Node n) {
-        return n == null ? -1 : n.height;
+        return n == null ? 0 : n.height;
     }
 
     private void updateHeight(Node n) {
@@ -15,7 +15,6 @@ public class AVLTree {
     private int getBalance(Node n) {
         return (n == null) ? 0 : getHeight(n.rightChild) - getHeight(n.leftChild);
     }
-
 
     private Node rotateRight(Node y) {
         Node x = y.leftChild;
@@ -41,12 +40,12 @@ public class AVLTree {
         updateHeight(z);
         int balance = getBalance(z);
         if (balance > 1) {
-            if (getBalance(z.rightChild) < 0) {
+            if (getHeight(z.rightChild.rightChild) <= getHeight(z.rightChild.leftChild)) {
                 z.rightChild = rotateRight(z.rightChild);
             }
             z = rotateLeft(z);
         } else if (balance < -1) {
-            if (getBalance(z.leftChild) > 0) {
+            if (getHeight(z.leftChild.leftChild) >= getHeight(z.leftChild.rightChild)) {
                 z.leftChild = rotateLeft(z.leftChild);
             }
             z = rotateRight(z);
@@ -58,6 +57,7 @@ public class AVLTree {
         root = insert(root, key);
     }
 
+    // Рекурсивная реализация вставки в АВЛ-дерево
     private Node insert(Node node, int key) {
         if (node == null) {
             return new Node(key);
@@ -66,9 +66,6 @@ public class AVLTree {
         } else {
             node.rightChild = insert(node.rightChild, key);
         }
-        // Обновление высоты узла после вставки
-        updateHeight(node);
-
         return rebalance(node);
     }
 
@@ -107,14 +104,14 @@ public class AVLTree {
 
     public void print() {
         pass(root);
-        int balance = getBalance(root);
-        System.out.println("Balance of root: " + balance);
     }
 
     private void pass(Node t) {
-        if (t != null) {
+        if (t.leftChild != null) {
             pass(t.leftChild);
-            System.out.println(t.key);
+        }
+        System.out.println(t.key);
+        if (t.rightChild != null) {
             pass(t.rightChild);
         }
     }
