@@ -1,4 +1,4 @@
-package homeWorks.hw20_28082023;
+package lessons.lesson20_28082023;
 
 class TreeNode {
     int value;
